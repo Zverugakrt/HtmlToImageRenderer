@@ -56,3 +56,7 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 /.vs
+/HtmlToImageRenderer/Properties/PublishProfiles/FolderProfile.pubxml
+/HtmlToImageRenderer/Properties/PublishProfiles/FolderProfile.pubxml.user
+/HtmlToImageRendererTest/Properties/PublishProfiles/FolderProfile.pubxml
+/HtmlToImageRendererTest/Properties/PublishProfiles/FolderProfile.pubxml.user

@@ -427,7 +427,7 @@ public sealed class FlexLayoutEngine
                 return false;
             }
 
-            if (node is HtmlTextNode text && !string.IsNullOrWhiteSpace(text.Text))
+            if (node is HtmlTextNode text && !WhitespaceRules.IsNullOrCollapsible(text.Text))
             {
                 return false;
             }

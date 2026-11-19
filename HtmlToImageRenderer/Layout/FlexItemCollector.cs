@@ -42,8 +42,9 @@ internal static class FlexItemCollector
             switch (child)
             {
                 case HtmlTextNode textNode:
-                    // White space between items is never rendered by a flex container.
-                    if (string.IsNullOrWhiteSpace(textNode.Text))
+                    // White space between items is never rendered by a flex container, while a
+                    // no-break space is content and still produces an anonymous item.
+                    if (WhitespaceRules.IsNullOrCollapsible(textNode.Text))
                     {
                         break;
                     }

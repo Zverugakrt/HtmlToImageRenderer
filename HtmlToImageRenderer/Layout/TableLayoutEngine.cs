@@ -260,7 +260,7 @@ public sealed class TableLayoutEngine
             switch (child)
             {
                 case HtmlTextNode textNode:
-                    if (!string.IsNullOrWhiteSpace(textNode.Text))
+                    if (!WhitespaceRules.IsNullOrCollapsible(textNode.Text))
                     {
                         strays.Add(textNode);
                     }

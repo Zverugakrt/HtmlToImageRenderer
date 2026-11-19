@@ -470,7 +470,8 @@ public sealed class BlockLayoutEngine
                 return false;
             }
 
-            if (node is HtmlTextNode text && !string.IsNullOrWhiteSpace(text.Text))
+            // A no-break space is content, so a node made of them must not be dropped.
+            if (node is HtmlTextNode text && !WhitespaceRules.IsNullOrCollapsible(text.Text))
             {
                 return false;
             }

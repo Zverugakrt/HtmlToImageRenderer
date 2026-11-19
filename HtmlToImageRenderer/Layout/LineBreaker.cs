@@ -88,7 +88,9 @@ public sealed class LineBreaker
                 continue;
             }
 
-            if (char.IsWhiteSpace(character))
+            // A no-break space belongs to the word: keeping it in the token both preserves its
+            // advance width and forbids a line break at that position.
+            if (WhitespaceRules.IsCollapsible(character))
             {
                 EmitSpace();
                 continue;
